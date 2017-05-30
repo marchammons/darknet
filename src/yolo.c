@@ -7,7 +7,11 @@
 #include "demo.h"
 
 #ifdef OPENCV
-#pragma comment(lib, "opencv_world320.lib")  
+    #ifdef _DEBUG
+        #pragma comment(lib, "opencv_world320d.lib")
+    #else
+        #pragma comment(lib, "opencv_world320.lib")
+    #endif
 #include "opencv2/opencv_modules.hpp"
 #include "opencv2/highgui/highgui_c.h"
 #include "opencv2/imgproc/imgproc_c.h"
