@@ -6,6 +6,7 @@
 #include "box.h"
 
 #ifdef OPENCV
+#include "opencv2/opencv_modules.hpp"
 #include "opencv2/highgui/highgui_c.h"
 #endif
 

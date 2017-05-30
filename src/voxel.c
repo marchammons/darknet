@@ -4,6 +4,7 @@
 #include "parser.h"
 
 #ifdef OPENCV
+#include "opencv2/opencv_modules.hpp"
 #include "opencv2/highgui/highgui_c.h"
 #include "opencv2/core/version.hpp"
 #ifndef CV_VERSION_EPOCH
