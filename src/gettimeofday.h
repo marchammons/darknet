@@ -13,8 +13,16 @@ struct timezone
   int  tz_minuteswest; /* minutes W of Greenwich */
   int  tz_dsttime;     /* type of dst correction */
 };
- 
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 int gettimeofday(struct timeval *tv, struct timezone *tz);
 
 /* never worry about timersub type activies again -- from GLIBC and upcased. */
 int timersub(struct timeval *a, struct timeval *b, struct timeval *result);
+
+#ifdef __cplusplus
+}
+#endif

@@ -93,31 +93,13 @@
     <ClCompile Include="..\..\src\activations.c">
       <Filter>common</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\art.c">
-      <Filter>common</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\blas.c">
       <Filter>common</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\box.c">
       <Filter>common</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\captcha.c">
-      <Filter>common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\cifar.c">
-      <Filter>common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\classifier.c">
-      <Filter>common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\coco.c">
-      <Filter>common</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\col2im.c">
-      <Filter>common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\compare.c">
       <Filter>common</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\cpu_gemm.c">
@@ -126,19 +108,7 @@
     <ClCompile Include="..\..\src\cuda.c">
       <Filter>common</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\darknet.c">
-      <Filter>common</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\data.c">
-      <Filter>common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\demo.c">
-      <Filter>common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\detector.c">
-      <Filter>common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\dice.c">
       <Filter>common</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\gemm.c">
@@ -148,12 +118,6 @@
       <Filter>common</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\gettimeofday.c">
-      <Filter>common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\go.c">
-      <Filter>common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\gru_layer.c">
       <Filter>common</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\im2col.c">
@@ -168,16 +132,10 @@
     <ClCompile Include="..\..\src\list.c">
       <Filter>common</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\local_layer.c">
-      <Filter>common</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\matrix.c">
       <Filter>common</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\network.c">
-      <Filter>common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\nightmare.c">
       <Filter>common</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\option_list.c">
@@ -186,38 +144,83 @@
     <ClCompile Include="..\..\src\parser.c">
       <Filter>common</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\rnn.c">
-      <Filter>common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\rnn_layer.c">
-      <Filter>common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\rnn_vid.c">
-      <Filter>common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\super.c">
-      <Filter>common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\swag.c">
-      <Filter>common</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\src\tag.c">
-      <Filter>common</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\tree.c">
       <Filter>common</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\utils.c">
       <Filter>common</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\voxel.c">
-      <Filter>common</Filter>
+    <ClCompile Include="..\..\src\art.c">
+      <Filter>apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\captcha.c">
+      <Filter>apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\cifar.c">
+      <Filter>apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\classifier.c">
+      <Filter>apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\coco.c">
+      <Filter>apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\compare.c">
+      <Filter>apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\darknet.c">
+      <Filter>apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\demo.c">
+      <Filter>apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\detector.c">
+      <Filter>apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\dice.c">
+      <Filter>apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\go.c">
+      <Filter>apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\gru_layer.c">
+      <Filter>layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\local_layer.c">
+      <Filter>layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rnn_layer.c">
+      <Filter>layers</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\writing.c">
-      <Filter>common</Filter>
+      <Filter>apps</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\yolo.c">
-      <Filter>common</Filter>
+      <Filter>apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\voxel.c">
+      <Filter>apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\tag.c">
+      <Filter>apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\super.c">
+      <Filter>apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\swag.c">
+      <Filter>apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rnn.c">
+      <Filter>apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\rnn_vid.c">
+      <Filter>apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\nightmare.c">
+      <Filter>apps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\my_src\my_demo.cpp">
+      <Filter>apps</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -284,9 +287,6 @@
     <ClInclude Include="..\..\src\box.h">
       <Filter>common</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\classifier.h">
-      <Filter>common</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\col2im.h">
       <Filter>common</Filter>
     </ClInclude>
@@ -296,9 +296,6 @@
     <ClInclude Include="..\..\src\data.h">
       <Filter>common</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\demo.h">
-      <Filter>common</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\gemm.h">
       <Filter>common</Filter>
     </ClInclude>
@@ -306,9 +303,6 @@
       <Filter>common</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\gettimeofday.h">
-      <Filter>common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\gru_layer.h">
       <Filter>common</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\im2col.h">
@@ -323,9 +317,6 @@
     <ClInclude Include="..\..\src\list.h">
       <Filter>common</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\local_layer.h">
-      <Filter>common</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\matrix.h">
       <Filter>common</Filter>
     </ClInclude>
@@ -336,9 +327,6 @@
       <Filter>common</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\parser.h">
-      <Filter>common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\rnn_layer.h">
       <Filter>common</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\stb_image.h">
@@ -355,6 +343,21 @@
     </ClInclude>
     <ClInclude Include="..\..\src\utils.h">
       <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\classifier.h">
+      <Filter>apps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\demo.h">
+      <Filter>apps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\gru_layer.h">
+      <Filter>layers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\local_layer.h">
+      <Filter>layers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\rnn_layer.h">
+      <Filter>layers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
