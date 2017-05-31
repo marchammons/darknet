@@ -13,8 +13,10 @@ convnet/
 decaf/
 submission/
 cfg/
-darknet
 .fuse*
+
+debug/
+release/
 
 # OS Generated #
 .DS_Store*
