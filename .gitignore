@@ -1,8 +1,18 @@
+*.weights
+*.dll
+*.db
+*.opendb
+*.pdb
+*.ipdb
+*.iobj
 *.o
 *.dSYM
 *.csv
 *.out
 *.png
+*.exe
+*.avi
+*.mp4
 mnist/
 data/
 caffe/
@@ -17,6 +27,7 @@ cfg/
 
 debug/
 release/
+
 
 # OS Generated #
 .DS_Store*
