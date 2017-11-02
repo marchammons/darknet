@@ -16,7 +16,7 @@ extern int gpu_index;
 #include "cublas_v2.h"
 
 #ifdef CUDNN
-#include "cudnn.h"
+#include <cudnn.h>
 #endif
 
 void check_error(cudaError_t status);

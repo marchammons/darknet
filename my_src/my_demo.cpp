@@ -15,9 +15,9 @@
 #define FRAMES 3
 
 #ifdef OPENCV
-#include "opencv2/highgui.hpp"
-#include "opencv2/videoio.hpp"
-#include "opencv2/imgproc.hpp"
+#include <opencv2/highgui.hpp>
+#include <opencv2/videoio.hpp>
+#include <opencv2/imgproc.hpp>
 
 static char **demo_names;
 static image **demo_alphabet;
