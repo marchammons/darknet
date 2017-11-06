@@ -564,7 +564,7 @@ void run_detector(int argc, char **argv)
         int classes = option_find_int(options, "classes", 20);
         char *name_list = option_find_str(options, "names", "data/names.list");
         char **names = get_labels(name_list);
-		if (filename[strlen(filename) - 1] == 0x0d) filename[strlen(filename) - 1] = 0;
+		if (filename && (filename[strlen(filename) - 1] == 0x0d)) filename[strlen(filename) - 1] = 0;
         demo(cfg, weights, thresh, cam_index, filename, names, classes, frame_skip, prefix, out_filename);
     }
 }
