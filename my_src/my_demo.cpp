@@ -40,6 +40,8 @@ static int demo_index = 0;
 static image images[FRAMES];
 static float *avg;
 
+extern void *collect_in_thread(void *ptr);
+
 image mat_to_image(cv::Mat src)
 {
     unsigned char *data = (unsigned char *)src.data;
@@ -169,6 +171,7 @@ extern "C" {
 
 		pthread_t fetch_thread;
 		pthread_t detect_thread;
+		pthread_t collect_thread;;
 
 		fetch_in_thread(0);
 		det = in;
@@ -197,6 +200,7 @@ extern "C" {
 
 		double before = get_wall_time();
 
+		if (pthread_create(&collect_thread, 0, collect_in_thread, 0)) error("Thread creation failed");
 		while (1) {
 			++count;
 			if (1) {

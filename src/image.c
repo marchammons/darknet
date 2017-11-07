@@ -2,6 +2,7 @@
 #include "utils.h"
 #include "blas.h"
 #include "cuda.h"
+#include "ws_queue.h"
 #include <stdio.h>
 #include <math.h>
 
@@ -236,6 +237,7 @@ void draw_detections(image im, int num, float thresh, box *boxes, float **probs,
                 image label = get_label(alphabet, names[class], (im.h*.03)/10);
                 draw_label(im, top + width, left, label, rgb);
             }
+			dobject
         }
     }
 }
@@ -297,6 +299,13 @@ void draw_detections_cv(IplImage* show_img, int num, float thresh, box *boxes, f
 			color.val[0] = red * 256;
 			color.val[1] = green * 256;
 			color.val[2] = blue * 256;
+
+			// create a temp object with the previous values to send to wsqueue
+			dn_object_t *o = NULL;
+			o = create_obj(names[class], prob * 100, 2, 2, b.x, b.y, b.w, b.h);
+			if(o) {
+				(void) dn_push(o);
+			}
 
 			cvRectangle(show_img, pt1, pt2, color, width, 8, 0);
 			//printf("left=%d, right=%d, top=%d, bottom=%d, obj_id=%d, obj=%s \n", left, right, top, bot, class, names[class]);
