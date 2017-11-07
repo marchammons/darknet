@@ -39,30 +39,36 @@ void * collect_in_thread(void *p) {
 		// Read from queue
 		while (!dn_queue_empty()) {
 			dn_object_t *o = dn_pop();
-			create_json(o, buffer, sizeof(buffer));
+			if (o) {
+				create_json(o, buffer, sizeof(buffer));
+				printf("JSON[%d]: %s\n", strlen(buffer), buffer);
+			}
+			sendto(socketC, buffer, strlen(buffer), 0, &serverInfo, len);
+			//strcpy(buffer, "{ msg : \"hello world\" }");
+			//sendto(socketC, buffer, strlen(buffer), 0, &serverInfo, len);
 		}
         //strcpy(buffer, "{ msg : \"hello world\" }");
 
 	    //sendto(socketC, buffer, sizeof(buffer), 0, (sockaddr*)&serverInfo, len);
-		sendto(socketC, buffer, strlen(buffer), 0, &serverInfo, len);
+		//sendto(socketC, buffer, strlen(buffer), 0, &serverInfo, len);
         // sleep(1);
     }
-    closesocket(socketC);
+    // closesocket(socketC);
 }
 
 void create_json(dn_object_t *o, char *buffer, int size) {
 
-	char *res = "[{ \"name\": \"%s\", \"prob\": %3.2f, \"ix\": %d, \"iy\": %d,\"x\": %d, \"y\": %d, \"width\": %d, \"height\": %d, \"color\": \"%2.2X%2.2X%2.2X%2.2XFF\" }]";
+	char *res = "[{ \"name\": \"%s\", \"prob\": %3.2f, \"ix\": %d, \"iy\": %d,\"left\": %d, \"top\": %d, \"right\": %d, \"bot\": %d, \"color\": \"#%2.2X%2.2X%2.2XFF\" }]";
 	sprintf(buffer, res, 
 		o->name,
 		o->prob,
 		o->x_size,
 		o->y_size,
-		o->x_box,
-		o->y_box,
-		o->w_box,
-		o->h_box,
-		o->box_red,
-		o->box_green,
-		o->box_blue);
+		(int)o->x_box,
+		(int)o->y_box,
+		(int)o->w_box,
+		(int)o->h_box,
+		(int)(o->box_red * 255),
+		(int)(o->box_green * 255),
+		(int)(o->box_blue * 255) );
 }

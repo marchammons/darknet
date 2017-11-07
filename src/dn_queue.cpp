@@ -26,7 +26,11 @@ dn_object_t* dn_pop() {
 }
 
 int dn_queue_empty() {
-	return _dn_queue.empty();
+	bool empty = true;
+	_dn_mutex.lock();
+	empty = _dn_queue.empty();
+	_dn_mutex.unlock();
+	return empty;
 }
 
 dn_object_t * create_obj(char *name,

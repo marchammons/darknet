@@ -245,17 +245,24 @@ void draw_detections(image im, int num, float thresh, box *boxes, float **probs,
 				prob,
 				im.h,
 				im.w,
+				/*
 				b.x,
 				b.y,
 				b.w,
 				b.h,
+				*/
+				left,
+				top,
+				right,
+				bot,
 				red,
 				green,
 				blue);
 			// add to queue
-			dn_push(o);
-
-				
+			if (o != NULL) {
+				printf("pushing\n");
+				dn_push(o);
+			}
         }
     }
 }
