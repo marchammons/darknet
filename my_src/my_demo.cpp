@@ -40,7 +40,9 @@ static int demo_index = 0;
 static image images[FRAMES];
 static float *avg;
 
-extern void *collect_in_thread(void *ptr);
+extern "C" {
+	extern void *collect_in_thread(void *ptr);
+}
 
 image mat_to_image(cv::Mat src)
 {

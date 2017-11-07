@@ -2,7 +2,7 @@
 #include "utils.h"
 #include "blas.h"
 #include "cuda.h"
-#include "ws_queue.h"
+#include "dn_queue.h"
 #include <stdio.h>
 #include <math.h>
 
@@ -237,7 +237,25 @@ void draw_detections(image im, int num, float thresh, box *boxes, float **probs,
                 image label = get_label(alphabet, names[class], (im.h*.03)/10);
                 draw_label(im, top + width, left, label, rgb);
             }
-			dobject
+
+			
+			
+			dn_object_t *o = NULL;
+			o = create_obj(names[class],
+				prob,
+				im.h,
+				im.w,
+				b.x,
+				b.y,
+				b.w,
+				b.h,
+				red,
+				green,
+				blue);
+			// add to queue
+			dn_push(o);
+
+				
         }
     }
 }
@@ -302,7 +320,7 @@ void draw_detections_cv(IplImage* show_img, int num, float thresh, box *boxes, f
 
 			// create a temp object with the previous values to send to wsqueue
 			dn_object_t *o = NULL;
-			o = create_obj(names[class], prob * 100, 2, 2, b.x, b.y, b.w, b.h);
+			o = create_obj(names[class], prob * 100, 2, show_img->width, show_img->height, b.x, b.y, b.w, b.h, color.val[0], color.val[1], color.val[2]);
 			if(o) {
 				(void) dn_push(o);
 			}
